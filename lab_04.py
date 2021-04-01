@@ -54,7 +54,7 @@ print(time_taken(5,tasks))
 
 #5
 def descriptive_task (input_description,list):
-    updatedTask=[]
+    updatedTask=["Task not found"]
     for each_task in list:
         if(each_task["description"]==input_description):
             updatedTask.append(each_task)
@@ -110,24 +110,24 @@ mainMenu = [
 ]
 #8 & 9
 
-def called_item(user_selection):
+def called_item(user_selection, list):
+    print (user_selection)
+    if(user_selection==2):
+        return uncompleted_tasks(tasks)
+    elif (user_selection==3):
+        return completed_tasks(tasks)
     
-    if(user_selection=="Display Uncompleted Tasks"):
-        return task[]
 
 
 
 
 def menu():
    userInput = input("Please enter from the menu options")
-   while(mainMenu[1][str(userInput)]):
-       print (mainMenu[1][str(userInput)])
-       print(called_item(mainMenu[1][str(userInput)]))
+   while(mainMenu[1][userInput]):
+       print (mainMenu[1][userInput])
+       print(called_item(int(userInput),tasks))
        break
    
-   
-   
-    
 print("# 8")
 menu()
 
